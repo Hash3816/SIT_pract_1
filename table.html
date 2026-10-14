@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Список популярных ноутбуков
+        </title>   
+    </head>
+    <body leftmargin="5%" bottommargin="5%">
+        <h5><a href="main_page.html">Уникальные Ноутбуки</a><br><a href="table.html">Список популярных ноутбуков</a></h5>
+
+        <hr>
+
+        <details open="open">
+            <summary>График</summary>
+
+            <form>
+                <p>
+                    <b>Значение по оси OX</b>
+                </p>
+
+                <label><input type="radio" name="value_x" value="0" id="type_laptop_x">Тип</label><br>
+                <label><input type="radio" name="value_x" value="1" id="country_x">Страна-разработчик</label><br>
+                <label><input type="radio" name="value_x" value="2" id="year_realese_x">Год выхода</label><br>
+
+                <p>
+                    <b>Значение по оси OY</b>
+                </p>
+
+                <label><input type="checkbox" name="value_y" value="0" id="max_price_y">Максимальная цена</label><br>
+                <label><input type="checkbox" name="value_y" value="1" id="min_price_y">Минимальная цена</label><br>
+                <label><input type="checkbox" name="value_y" value="1" id="avg_price_y">Средняя цена</label><br>
+
+                <p>
+                <input type="button" value="Построить"><br>
+                </p>
+            </form>
+
+            <p>
+            График(потом будет)
+            </p>
+        </details>
+        
+        <details open="open">
+            <summary>Фильтр</summary>
+
+            <form>
+                <p><label>Модель(без производителя): <input type="text" name="model_name" id="model_laptop_filter"></label></p>
+                <p><label>Тип: <input type="text" name="type_name" id="type_laptop_filter"></label><br></p>
+                <p><label>Страна-разработчик: <input type="text" name="type_name" id="country_filter"></label></p>
+                <p><label>Компания: <input type="text" name="company_name" id="company_filter"></label></p>
+                <p>Год: от <input type="number" min="1982" max="2026" name="min_year" id="year_begin_filter"> до <input type="number" min="1982" max="2026" name="max_year" id="year_end_filter"></p>
+                <p>Цена(в долларах): от <input type="number" name="min_price" id="price_min_filter"> до <input type="number" name="max_price" id="price_max_filter"></p>
+
+                <p>
+                <input type="button" value="Найти"><br>
+                </p>
+            </form>   
+        </details>
+        
+        <details open="open">
+            <summary>Сортировка</summary>
+
+            <form>
+                <p>Первый уровень:
+                <select name="first_level">
+                    <option value="0">Нет</option>
+                    <option value="1">Модель</option>
+                    <option value="2">Тип</option>
+                    <option value="3">Страна-разработчик</option>
+                    <option value="4">Компания</option>
+                    <option value="5">Год выхода</option>
+                    <option value="6">Цена</option>
+                </select> по убыванию? <input type="checkbox" name="first_level_descending" value="1" id="is_desc_1">
+                </p>
+
+                <p>Второй уровень:
+                <select name="second_level">
+                    <option value="0">Нет</option>
+                    <option value="1">Модель</option>
+                    <option value="2">Тип</option>
+                    <option value="3">Страна-разработчик</option>
+                    <option value="4">Компания</option>
+                    <option value="5">Год выхода</option>
+                    <option value="6">Цена(в долларах)</option>
+                </select> по убыванию? <input type="checkbox" name="second_level_descending" value="2" id="is_desc_2">
+                </p>
+
+                <p>Третий уровень:
+                <select name="third_level">
+                    <option value="0">Нет</option>
+                    <option value="1">Модель</option>
+                    <option value="2">Тип</option>
+                    <option value="3">Страна-разработчик</option>
+                    <option value="4">Компания</option>
+                    <option value="5">Год выхода</option>
+                    <option value="6">Цена</option>
+                </select> по убыванию? <input type="checkbox" name="third_level_descending" value="3" id="is_desc_3">
+                </p>
+            
+                <p>
+                <input type="button" value="Сортировать"><br>
+                </p>
+            </form>   
+        </details>
+        
+        <p>
+        </p>
+        <br>  
+        <p>
+        <table align="left" border="1" cellpadding="2" cellspacing="0" bordercolor="black">
+            <thead>
+                <tr>
+                    <td width="125">Модель</td>
+                    <td width="75">Тип</td>
+                    <td width="75">Страна-разработчик</td>
+                    <td>Компания</td>
+                    <td>Год выхода</td>
+                    <td width="100">Цена(в долларах)</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>ThinkPad 700C</td>
+                    <td>Ноутбук</td>
+                    <td>Япония</td>
+                    <td>IBM</td>
+                    <td>1992</td>
+                    <td>5700</td>
+                </tr>
+                
+                <tr>
+                    <td>ThinkPad T14</td>
+                    <td>Ультрабук</td>
+                    <td>Китай</td>
+                    <td>Lenovo</td>
+                    <td>2005</td>
+                    <td>1500</td>
+                </tr>
+
+                <tr>
+                    <td>Vivobook S200E</td>
+                    <td>Обычный</td>
+                    <td>Тайвань</td>
+                    <td>Asus</td>
+                    <td>2012</td>
+                    <td>500</td>
+                </tr>
+
+                <tr>
+                    <td>Zenbook UX21E</td>
+                    <td>Ультрабук</td>
+                    <td>Тайвань</td>
+                    <td>Asus</td>
+                    <td>2011</td>
+                    <td>1000</td>
+                </tr>
+
+                <tr>
+                    <td>Macbook Pro 2020</td>
+                    <td>Обычынй</td>
+                    <td>США</td>
+                    <td>Apple</td>
+                    <td>2020</td>
+                    <td>1500</td>
+                </tr>
+
+                <tr>
+                    <td>Macbook Pro 2026</td>
+                    <td>Обычный</td>
+                    <td>США</td>
+                    <td>Apple</td>
+                    <td>2026</td>
+                    <td>1600</td>
+
+                </tr>
+        
+                <tr>
+                    <td>Magicbook Pro 16 Hunter</td>
+                    <td>Игровой</td>
+                    <td>Китай</td>
+                    <td>Honor</td>
+                    <td>2025</td>
+                    <td>1500</td>
+                </tr>
+                
+                <tr>
+                    <td>Magicbook Pro 16 Hunter</td>
+                    <td>Игровой</td>
+                    <td>Китай</td>
+                    <td>Honor</td>
+                    <td>2025</td>
+                    <td>1500</td>
+                </tr>
+                
+                <tr>
+                    <td>MagicBook X16</td>
+                    <td>Ультрабук</td>
+                    <td>Китай</td>
+                    <td>Honor</td>
+                    <td>2025</td>
+                    <td>700</td>
+                </tr>
+                
+                <tr>
+                    <td>Nitro Lite NL16-71G-590Q</td>
+                    <td>Игровой</td>
+                    <td>Тайвань</td>
+                    <td>Acer</td>
+                    <td>2025</td>
+                    <td>750</td>
+                </tr>
+
+                <tr>
+                    <td>ThinkPad X1 Carbon Gen 12</td>
+                    <td>Ультрабук</td>
+                    <td>Китай</td>
+                    <td>Lenovo</td>
+                    <td>2024</td>
+                    <td>1800</td>
+                </tr>
+
+                <tr>
+                    <td>Legion Pro 7i Gen 9</td>
+                    <td>Игровой</td>
+                    <td>Китай</td>
+                    <td>Lenovo</td>
+                    <td>2024</td>
+                    <td>2400</td>
+                </tr>
+
+                <tr>
+                    <td>Yoga Slim 7x</td>
+                    <td>Ультрабук</td>
+                    <td>Китай</td>
+                    <td>Lenovo</td>
+                    <td>2024</td>
+                    <td>1200</td>
+                </tr>
+
+                <tr>
+                    <td>IdeaPad Slim 5 16</td>
+                    <td>Обычный</td>
+                    <td>Китай</td>
+                    <td>Lenovo</td>
+                    <td>2023</td>
+                    <td>750</td>
+                </tr>
+
+                <tr>
+                    <td>MacBook Air M1</td>
+                    <td>Ультрабук</td>
+                    <td>США</td>
+                    <td>Apple</td>
+                    <td>2020</td>
+                    <td>999</td>
+                </tr>
+
+                <tr>
+                    <td>MacBook Air M3 15</td>
+                    <td>Ультрабук</td>
+                    <td>США</td>
+                    <td>Apple</td>
+                    <td>2024</td>
+                    <td>1299</td>
+                </tr>
+
+                <tr>
+                    <td>MacBook Pro 16 M3 Max</td>
+                    <td>Обычный</td>
+                    <td>США</td>
+                    <td>Apple</td>
+                    <td>2023</td>
+                    <td>3499</td>
+                </tr>
+
+                <tr>
+                    <td>iBook G3 Tangerine</td>
+                    <td>Ноутбук</td>
+                    <td>США</td>
+                    <td>Apple</td>
+                    <td>1999</td>
+                    <td>1599</td>
+                </tr>
+
+                <tr>
+                    <td>ROG Zephyrus G16</td>
+                    <td>Игровой</td>
+                    <td>Тайвань</td>
+                    <td>Asus</td>
+                    <td>2024</td>
+                    <td>1950</td>
+                </tr>
+
+                <tr>
+                    <td>ROG Strix SCAR 18</td>
+                    <td>Игровой</td>
+                    <td>Тайвань</td>
+                    <td>Asus</td>
+                    <td>2024</td>
+                    <td>3000</td>
+                </tr>
+
+                <tr>
+                    <td>Zenbook Duo UX8406</td>
+                    <td>Ультрабук</td>
+                    <td>Тайвань</td>
+                    <td>Asus</td>
+                    <td>2024</td>
+                    <td>1500</td>
+                </tr>
+
+                <tr>
+                    <td>TUF Gaming A15</td>
+                    <td>Игровой</td>
+                    <td>Тайвань</td>
+                    <td>Asus</td>
+                    <td>2023</td>
+                    <td>950</td>
+                </tr>
+
+                <tr>
+                    <td>Eee PC 701</td>
+                    <td>Нетбук</td>
+                    <td>Тайвань</td>
+                    <td>Asus</td>
+                    <td>2007</td>
+                    <td>400</td>
+                </tr>
+
+                <tr>
+                    <td>Predator Helios 16</td>
+                    <td>Игровой</td>
+                    <td>Тайвань</td>
+                    <td>Acer</td>
+                    <td>2024</td>
+                    <td>1700</td>
+                </tr>
+
+                <tr>
+                    <td>Swift Go 14</td>
+                    <td>Ультрабук</td>
+                    <td>Тайвань</td>
+                    <td>Acer</td>
+                    <td>2024</td>
+                    <td>800</td>
+                </tr>
+
+                <tr>
+                    <td>Aspire 5 A515</td>
+                    <td>Обычный</td>
+                    <td>Тайвань</td>
+                    <td>Acer</td>
+                    <td>2023</td>
+                    <td>550</td>
+                </tr>
+
+                <tr>
+                    <td>Nitro 5 AN515</td>
+                    <td>Игровой</td>
+                    <td>Тайвань</td>
+                    <td>Acer</td>
+                    <td>2022</td>
+                    <td>850</td>
+                </tr>
+
+                <tr>
+                    <td>XPS 13 9340</td>
+                    <td>Ультрабук</td>
+                    <td>США</td>
+                    <td>Dell</td>
+                    <td>2024</td>
+                    <td>1300</td>
+                </tr>
+
+                <tr>
+                    <td>XPS 16 9640</td>
+                    <td>Ультрабук</td>
+                    <td>США</td>
+                    <td>Dell</td>
+                    <td>2024</td>
+                    <td>1900</td>
+                </tr>
+
+                <tr>
+                    <td>Alienware m18 R2</td>
+                    <td>Игровой</td>
+                    <td>США</td>
+                    <td>Dell</td>
+                    <td>2024</td>
+                    <td>2500</td>
+                </tr>
+
+                <tr>
+                    <td>Inspiron 15 3520</td>
+                    <td>Обычный</td>
+                    <td>США</td>
+                    <td>Dell</td>
+                    <td>2023</td>
+                    <td>450</td>
+                </tr>
+
+                <tr>
+                    <td>Latitude 7440</td>
+                    <td>Ультрабук</td>
+                    <td>США</td>
+                    <td>Dell</td>
+                    <td>2023</td>
+                    <td>1400</td>
+                </tr>
+
+                <tr>
+                    <td>Spectre x360 14</td>
+                    <td>Трансформер</td>
+                    <td>США</td>
+                    <td>HP</td>
+                    <td>2024</td>
+                    <td>1450</td>
+                </tr>
+
+                <tr>
+                    <td>OMEN 16</td>
+                    <td>Игровой</td>
+                    <td>США</td>
+                    <td>HP</td>
+                    <td>2024</td>
+                    <td>1350</td>
+                </tr>
+
+                <tr>
+                    <td>Pavilion Plus 14</td>
+                    <td>Обычный</td>
+                    <td>США</td>
+                    <td>HP</td>
+                    <td>2023</td>
+                    <td>700</td>
+                </tr>
+
+                <tr>
+                    <td>Victus 16</td>
+                    <td>Игровой</td>
+                    <td>США</td>
+                    <td>HP</td>
+                    <td>2023</td>
+                    <td>900</td>
+                </tr>
+
+                <tr>
+                    <td>OmniBook X 14</td>
+                    <td>Ультрабук</td>
+                    <td>США</td>
+                    <td>HP</td>
+                    <td>2024</td>
+                    <td>1150</td>
+                </tr>
+
+                <tr>
+                    <td>MateBook X Pro 2024</td>
+                    <td>Ультрабук</td>
+                    <td>Китай</td>
+                    <td>Huawei</td>
+                    <td>2024</td>
+                    <td>1800</td>
+                </tr>
+
+                <tr>
+                    <td>MateBook D 16 2024</td>
+                    <td>Обычный</td>
+                    <td>Китай</td>
+                    <td>Huawei</td>
+                    <td>2024</td>
+                    <td>750</td>
+                </tr>
+
+                <tr>
+                    <td>MateBook 14 2024</td>
+                    <td>Ультрабук</td>
+                    <td>Китай</td>
+                    <td>Huawei</td>
+                    <td>2024</td>
+                    <td>950</td>
+                </tr>
+
+                <tr>
+                    <td>MagicBook 14 2023</td>
+                    <td>Ультрабук</td>
+                    <td>Китай</td>
+                    <td>Honor</td>
+                    <td>2023</td>
+                    <td>800</td>
+                </tr>
+
+                <tr>
+                    <td>Galaxy Book4 Pro 360</td>
+                    <td>Трансформер</td>
+                    <td>Южная Корея</td>
+                    <td>Samsung</td>
+                    <td>2024</td>
+                    <td>1900</td>
+                </tr>
+
+                <tr>
+                    <td>Galaxy Book4 Ultra</td>
+                    <td>Игровой</td>
+                    <td>Южная Корея</td>
+                    <td>Samsung</td>
+                    <td>2024</td>
+                    <td>2400</td>
+                </tr>
+
+                <tr>
+                    <td>Gram 17 2024</td>
+                    <td>Ультрабук</td>
+                    <td>Южная Корея</td>
+                    <td>LG</td>
+                    <td>2024</td>
+                    <td>1600</td>
+                </tr>
+
+                <tr>
+                    <td>Blade 16 2024</td>
+                    <td>Игровой</td>
+                    <td>США</td>
+                    <td>Razer</td>
+                    <td>2024</td>
+                    <td>3000</td>
+                </tr>
+
+                <tr>
+                    <td>Blade 14 2024</td>
+                    <td>Игровой</td>
+                    <td>США</td>
+                    <td>Razer</td>
+                    <td>2024</td>
+                    <td>2400</td>
+                </tr>
+
+                <tr>
+                    <td>Titan 18 HX A14V</td>
+                    <td>Игровой</td>
+                    <td>Тайвань</td>
+                    <td>MSI</td>
+                    <td>2024</td>
+                    <td>5000</td>
+                </tr>
+
+                <tr>
+                    <td>Katana A15 B8V</td>
+                    <td>Игровой</td>
+                    <td>Тайвань</td>
+                    <td>MSI</td>
+                    <td>2024</td>
+                    <td>1000</td>
+                </tr>
+
+                <tr>
+                    <td>Stealth 16 AI Studio</td>
+                    <td>Игровой</td>
+                    <td>Тайвань</td>
+                    <td>MSI</td>
+                    <td>2024</td>
+                    <td>2000</td>
+                </tr>
+                
+                <tr>
+                    <td>Prestige 14 AI Studio</td>
+                    <td>Ультрабук</td>
+                    <td>Тайвань</td>
+                    <td>MSI</td>
+                    <td>2024</td>
+                    <td>1300</td>
+                </tr>
+            <tbody>
+        </table>
+    </body>       
+</html>
